@@ -1,0 +1,32 @@
+# Ignore node_modules and .env in root, client, and server
+node_modules/
+.env
+
+client/node_modules/
+client/.env
+
+server/node_modules/
+server/.env
+
+# Build output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Misc
+npm-debug.log*
+yarn-
