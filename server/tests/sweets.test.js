@@ -19,6 +19,7 @@ afterEach(async () => {
   await Sweet.deleteMany();
 });
 
+// test: add sweets
 describe('POST /api/sweets', () => {
   it('should return 400 if required fields are missing', async () => {
     const res = await request(app).post('/api/sweets').send({});
@@ -94,6 +95,8 @@ describe('POST /api/sweets', () => {
   });
 });
 
+
+// test : View Sweets
 describe('GET /api/sweets', () => {
   it('should return an array of all sweets', async () => {
     // Insert sample sweets into DB
@@ -127,7 +130,7 @@ describe('GET /api/sweets', () => {
   });
 });
 
-
+// test: Delete Sweets
 describe('DELETE /api/sweets/:id', () => {
   it('should delete the sweet by ID', async () => {
     // First, add a sweet
@@ -171,6 +174,7 @@ describe('DELETE /api/sweets/:id', () => {
   });
 });
 
+// test: Search Sweets
 describe('GET /api/sweets/search', () => {
   beforeEach(async () => {
     await Sweet.insertMany([
@@ -257,6 +261,7 @@ describe('GET /api/sweets/search', () => {
 });
 
 
+// test : Purchase Sweets
 describe('POST /api/sweets/:id/purchase', () => {
   let sweetId;
 
