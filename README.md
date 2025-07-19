@@ -108,6 +108,7 @@ This project adheres strictly to **Test-Driven Development** principles.
 ### 📊 To check test coverage:
 
 ```bash
+cd server
 npm test -- --coverage
 ```
 
